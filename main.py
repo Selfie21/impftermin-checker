@@ -42,8 +42,8 @@ if __name__ == "__main__":
     driver = webdriver.Chrome(options=chrome_options)
 
     while True:
-        config['wait_time_between_each_run'] += randrange(10)
-        config['wait_time_between_each_dataset'] += randrange(3)
+        config['wait_time_between_each_run'] = config['wait_time_between_each_run'] + randrange(10)
+        config['wait_time_between_each_dataset'] = config['wait_time_between_each_run'] + randrange(3)
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         print(f"\n\nEs ist {now}, starte nächsten Versuch:")
 
