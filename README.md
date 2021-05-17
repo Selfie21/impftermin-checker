@@ -6,8 +6,8 @@ Install the dependencies with:
 pip3 install selenium python-telegram-bot playsound
 ```
 
-### Install Geckodriver
-The Checker uses Selenium with Firefox. For that to work, you need to have the [Geckodriver](https://github.com/mozilla/geckodriver/releases) executable in your PATH. Download the respective binary for your OS and make sure it's accessible (on Ubuntu, just run `apt-get install firefox-geckodriver`).
+### Install Chromedriver
+The Checker uses Selenium with Chrome. For that to work, you need to have the [Chromedriver](https://chromedriver.chromium.org/downloads) executable in your PATH. Download the respective binary for your OS and make sure it's accessible.
 
 ### Create `config.json`
 Create a `config.json` based on the `config.example.json`.
@@ -69,7 +69,7 @@ Run the Checker using
 python3 impftermin_checker.py
 ```
 
-Using the `selenium` framework, the Checker will then remote-control a Firefox to simulate a user checking for appointments and Vermittlungscodes.
+Using the `selenium` framework, the Checker will then remote-control a Chrome to simulate a user checking for appointments and Vermittlungscodes.
 If there's an appointment available, it will stop, play an alarm sound, leave the browser window open and notify you via email and Telegram.
 If there's a Vermittlungscode, it will notify you via email and Telegram, but will not stop nor play an alarm sound.
 
